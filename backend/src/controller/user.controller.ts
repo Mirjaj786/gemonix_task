@@ -169,10 +169,10 @@ export const forgetPassword = async (req: Request, res: Response) => {
       });
     }
 
-    // Generate a 6-digit OTP
+    // 6-digit OTP
     const otp = Math.floor(100000 + Math.random() * 900000);
 
-    // Update user with new OTP
+    
     user.otp = otp;
     await user.save();
 
