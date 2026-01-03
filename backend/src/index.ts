@@ -7,6 +7,8 @@ import userRoute from "./router/user.route";
 const app = express();
 const PORT = 4000;
 
+import playerRoutes from "./router/player.route";
+
 // parse JSON data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -16,6 +18,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.use(userRoute);
+app.use("/players", playerRoutes);
 
 app.listen(PORT, () => {
   connectDB();
