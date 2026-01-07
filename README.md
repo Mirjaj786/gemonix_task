@@ -1,6 +1,6 @@
 1. http://localhost:4000/auth  -> this verify the authntication 
 
-test -> pehele Login then copy the token -> send this toke to the header -> key:Authorization , value: mirjaj_gemonix token.......
+test -> pehele Login then copy the token -> send this toke to the header -> key:Authorization , value:gemonix token.......
 
 2. http://localhost:4000/auth/signup  -> register new User using name, email,password  with imput validation using Zod
    take data form req.body -> then test

@@ -11,7 +11,10 @@ export const authMiddleware = (
 ) => {
   const authHeader = req.headers.authorization;
 
-  if (!authHeader || !authHeader.startsWith(`${process.env.secret_prefix}  `)) {
+  if (
+    !authHeader ||
+    !authHeader.startsWith(`${process.env.secret_prefix}${" "}`)
+  ) {
     return res.status(401).json({ success: false, message: "Unauthorized" });
   }
 
